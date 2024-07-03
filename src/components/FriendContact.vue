@@ -14,12 +14,14 @@
                     {{ email }}
                 </li>
             </ul>
+            <button @click="$emit('delete', id)">Delete</button>
         </li>
     </div>
 </template>
 
 <script>
 export default {
+    emits:['delete'],
     props: {
         isFavourite: {
             type: Boolean,

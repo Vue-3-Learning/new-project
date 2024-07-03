@@ -5,7 +5,7 @@
     </header>
     <new-friend @add-contact="addContact"></new-friend>
     <ul>
-      <friend-contact v-for="friend in friends" :key="friend.id" :id="friend.id" :name="friend.name" :email="friend.email" :phone="friend.phone" :isFavourite="friend.isFavourite" @toggle-friend="toggleFav"></friend-contact>
+      <friend-contact v-for="friend in friends" :key="friend.id" :id="friend.id" :name="friend.name" :email="friend.email" :phone="friend.phone" :isFavourite="friend.isFavourite" @toggle-friend="toggleFav" @delete="deleteContact"></friend-contact>
     </ul>
   </section>
 </template>
@@ -46,6 +46,9 @@ const newFriendContact = {
           isFavourite: false
 }
 this.friends.push(newFriendContact)
+    },
+    deleteContact(id){
+      this.friends = this.friends.filter(friend => friend.id !== id)
     }
 }};
 </script>

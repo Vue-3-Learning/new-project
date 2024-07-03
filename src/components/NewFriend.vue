@@ -28,6 +28,9 @@ export default {
     methods:{
         submitData(){
             this.$emit('add-contact', this.enteredName, this.enteredEmail, this.enteredPhone)
+            this.enteredName='',
+            this.enteredPhone='',
+            this.enteredEmail=''
         }
     }
 }
