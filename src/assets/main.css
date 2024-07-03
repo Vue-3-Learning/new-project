@@ -6,7 +6,19 @@
   padding: 2rem;
   font-weight: normal;
 }
-
+#app input {
+  font: inherit;
+  padding: 0.15rem;
+}
+#app label {
+  font-weight: bold;
+  margin-right: 1rem;
+  width: 7rem;
+  display: inline-block;
+}
+#app form div {
+  margin: 1rem 0;
+}
 a,
 .green {
   text-decoration: none;
