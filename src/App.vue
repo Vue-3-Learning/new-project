@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <section>
     <header>
       <h1>My Friends</h1>
@@ -108,5 +108,40 @@ header {
   background-color: #ec3169;
   border-color: #ec3169;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}
+</style> -->
+<template>
+  <div>
+    <the-header></the-header>
+    <badge-list></badge-list>
+    <user-info
+      :full-name="activeUser.name"
+      :info-text="activeUser.description"
+      :role="activeUser.role"
+    ></user-info>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      activeUser: {
+        name: 'Maximilian Schwarzmüller',
+        description: 'Site owner and admin',
+        role: 'admin',
+      },
+    };
+  },
+};
+</script>
+
+<style>
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
 }
 </style>
